@@ -6,6 +6,12 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.static('public'));
+
+app.get('/',(req,res)=>{
+    res.render('public/index.html')
+})
+
+
 app.post('/submit', (req, res) => {
     const formData = req.body;
     console.log(formData);
