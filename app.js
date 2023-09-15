@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 4000;
 const cors = require('cors');
 app.use(cors());
 app.use(express.json());
@@ -41,6 +42,6 @@ async function fetchExternalAPI(formData) {
     }
 }
 
-app.listen(4000, () => {
-    console.log(`Server is listening on port 4000`);
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
 });
