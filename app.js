@@ -7,10 +7,10 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-app.get('/',(req,res)=>{
-    console.log("hii")
-    res.render('public/index.html')
-})
+// app.get('/',(req,res)=>{
+//     console.log("hii")
+//     res.render('index.html')
+// })
 
 
 app.post('/submit', (req, res) => {
